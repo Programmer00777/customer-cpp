@@ -1,13 +1,10 @@
-#include "CustomerService.h"
+#include "CustomerTester.h"
 
 using namespace std;
 
 int main() {
-    CustomerService customerService;
-
-    customerService.generateRandomCustomers();
-    customerService.printCustomersSortedByFirstNameInAlphabetOrder();
-    customerService.printCustomersSortedByCardNumberInSpecifiedRange(200, 700);
+    CustomerTester tester;
+    tester.startTest();
 
     return 0;
 }

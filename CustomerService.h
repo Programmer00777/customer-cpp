@@ -48,7 +48,11 @@ public:
         printAllCustomers();
     }
 
-    void printCustomersSortedByCardNumberInSpecifiedRange(int from, int to) {
+    void printCustomersSortedByCardNumberInSpecifiedRange() {
+        int from, to;
+        cout << "Please, enter the range of numbers to search for credit cards > " << endl;
+        cin >> from >> to;
+
         if (from > 99 && to < 1000) {
             cout << "Customers with card numbers between " << from << " and " << to << endl << endl;
             for (int i = 0; i < numberOfCustomers; i++) {

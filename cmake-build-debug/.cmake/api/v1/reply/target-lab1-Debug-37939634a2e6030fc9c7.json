@@ -94,7 +94,8 @@
 			[
 				1,
 				2,
-				3
+				3,
+				4
 			]
 		}
 	],
@@ -119,6 +120,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "CustomerUtil.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "CustomerTester.h",
 			"sourceGroupIndex" : 1
 		}
 	],
