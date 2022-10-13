@@ -34,8 +34,18 @@ public:
         printAllCustomers();
     }
 
-    void printCustomersSortedByNameInAlphabetOrder() {
-
+    void printCustomersSortedByFirstNameInAlphabetOrder() {
+        for (int i = 0; i < numberOfCustomers; i++) {
+            for (int k = i + 1; k < numberOfCustomers; k++) {
+                if (customers[i].getFirstName() > customers[k].getFirstName()) {
+                    Customer temp = customers[i];
+                    customers[i] = customers[k];
+                    customers[k] = temp;
+                }
+            }
+        }
+        cout << "Sorted by firstname" << endl;
+        printAllCustomers();
     }
 
     void printAllCustomers() {

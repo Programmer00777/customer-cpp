@@ -6,6 +6,7 @@ int main() {
     CustomerService customerService;
 
     customerService.generateRandomCustomers();
+    customerService.printCustomersSortedByFirstNameInAlphabetOrder();
 
     return 0;
 }
