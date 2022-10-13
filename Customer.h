@@ -19,7 +19,14 @@ private:
     int bankAccountId;
 
 public:
-    Customer() = default;
+    Customer() {
+        this -> firstName = "empty";
+        this -> lastName = "empty";
+        this -> address = "empty";
+        this -> phoneNumber = "empty";
+        this -> creditCardNumber = 0;
+        this -> bankAccountId = 0;
+    }
 
     Customer(string firstName,
              string lastName,
@@ -98,11 +105,11 @@ public:
     }
 
     string toString() {
-        return "Fullname: " + getFirstName() + " " + getLastName() +
+        return "Fullname: " + getLastName() + " " + getFirstName() +
                 "\nAddress: " + getAddress() +
                 "\nPhone number: " + getPhoneNumber() +
-                "\nCredit card number: " + (""+getCreditCardNumber()) +
-                "\nBank account ID: " + (""+getBankAccountId()) + "\n";
+                "\nCredit card number: " + to_string(getCreditCardNumber()) +
+                "\nBank account ID: " + to_string(getBankAccountId()) + "\n";
 
     }
 };

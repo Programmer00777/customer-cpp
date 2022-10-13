@@ -1,17 +1,11 @@
-#include <iostream>
+#include "CustomerService.h"
 
 using namespace std;
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    int* arrayOfNumbers = new int(10);
-    for (int i = 0; i < 20; i++) {
-        arrayOfNumbers[i] = i;
-    }
+    CustomerService customerService;
 
-    for (int i = 0; i < 20; i++) {
-        cout << arrayOfNumbers[i] << endl;
-    }
+    customerService.generateRandomCustomers();
 
     return 0;
 }
