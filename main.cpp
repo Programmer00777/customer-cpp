@@ -7,6 +7,7 @@ int main() {
 
     customerService.generateRandomCustomers();
     customerService.printCustomersSortedByFirstNameInAlphabetOrder();
+    customerService.printCustomersSortedByCardNumberInSpecifiedRange(200, 700);
 
     return 0;
 }

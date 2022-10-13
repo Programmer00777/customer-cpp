@@ -30,7 +30,7 @@ public:
         }
 
         cout << "Thank you! " << numberOfCustomers << " have been successfully generated." << endl;
-        cout << "Here they are:" << endl;
+        cout << "Here they are:" << endl << endl;
         printAllCustomers();
     }
 
@@ -46,6 +46,19 @@ public:
         }
         cout << "Sorted by firstname" << endl;
         printAllCustomers();
+    }
+
+    void printCustomersSortedByCardNumberInSpecifiedRange(int from, int to) {
+        if (from > 99 && to < 1000) {
+            cout << "Customers with card numbers between " << from << " and " << to << endl << endl;
+            for (int i = 0; i < numberOfCustomers; i++) {
+                if (customers[i].getCreditCardNumber() >= from && customers[i].getCreditCardNumber() <= to) {
+                    cout << customers[i].toString() << endl;
+                }
+            }
+        } else {
+            cout << "Card number must be between 100 and 999";
+        }
     }
 
     void printAllCustomers() {
